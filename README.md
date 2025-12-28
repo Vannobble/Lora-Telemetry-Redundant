@@ -1,5 +1,7 @@
 # LoRa Redundancy System for UAV Telemetry
 
+![Lora](assets/Lora.jpeg)
+
 ## 📌 Overview
 Sistem redundansi komunikasi berbasis LoRa untuk mentransmisikan data telemetri UAV (Altitude, GPS Coordinates, Battery Status, dan Status Text) sebagai backup komunikasi utama.
 
@@ -9,14 +11,10 @@ Sistem redundansi komunikasi berbasis LoRa untuk mentransmisikan data telemetri 
 - Monitoring real-time parameter kritis UAV dengan latensi rendah
 
 ## 📊 Diagram Alur Data
-```mermaid
-graph LR
-    A[UAV Flight Controller] -->|MAVLink Serial| B[LoRa Transmitter]
-    B -->|LoRa 390MHz| C[LoRa Receiver]
-    C -->|Serial Monitor| D[Ground Station/Display]
-```
+![Diagram](assets/Diagram.jpeg)
 
 ## 🛠️ Spesifikasi Teknis
+![Spesifikasi](assets/Specification.png)
 
 ### **Transmitter (Drone Side)**
 - **MCU**: ESP32 (dengan dual core)
@@ -189,30 +187,6 @@ Avg SNR: 8.20 dB
 | **Data corrupt** | Interferensi | Ubah spreading factor atau bandwidth |
 | **LED tidak menyala** | Power issue | Periksa koneksi power 3.3V |
 
-## 📊 Testing Results
-
-### **Laboratorium Testing:**
-- Success rate: 99.8% @ 100m
-- Packet loss: < 0.2%
-- Maximum latency: 98ms
-
-### **Field Testing:**
-- Maximum range: 2.8km (urban)
-- Minimum RSSI: -121 dBm
-- Average SNR: 9.5 dB
-
-## 🔮 Pengembangan ke Depan
-
-### **Short-term:**
-- [ ] Enkripsi data sederhana
-- [ ] SD card logging
-- [ ] Web interface monitoring
-
-### **Long-term:**
-- [ ] Multi-node receiver
-- [ ] Frequency hopping
-- [ ] Integration dengan ground station software
-
 ## 📝 Catatan Penting
 
 1. **Regulasi Frekuensi**: Pastikan penggunaan 390MHz sesuai regulasi lokal
@@ -220,25 +194,8 @@ Avg SNR: 8.20 dB
 3. **Antenna Placement**: Posisi antenna berpengaruh besar pada range
 4. **MAVLink Version**: Compatible dengan MAVLink v2
 
-## 👥 Kontribusi
-
-Proyek open-source. Silakan fork dan submit pull requests untuk:
-- Bug fixes
-- Fitur baru
-- Documentation improvements
-
-## 📄 Lisensi
-MIT License - Lihat file LICENSE untuk detail
-
-## 🙏 Acknowledgments
-- Tim pengembangan UAV
-- Komunitas Arduino Indonesia
-- Sandeep Mistry untuk library LoRa
-
----
-
 **⚠️ Disclaimer**: Sistem ini sebagai redundansi/redundancy system. Selalu pertahankan sistem komunikasi utama sebagai primary.
 
-**📧 Contact**: [your-email@domain.com]
+**📧 Contact**: [doshansel3@gmail.com]
 **🔗 Repository**: [github-link-here]
 **📅 Last Updated**: [current-date]

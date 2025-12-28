@@ -197,5 +197,4 @@ Avg SNR: 8.20 dB
 **⚠️ Disclaimer**: Sistem ini sebagai redundansi/redundancy system. Selalu pertahankan sistem komunikasi utama sebagai primary.
 
 **📧 Contact**: [doshansel3@gmail.com]
-**🔗 Repository**: [github-link-here]
-**📅 Last Updated**: [current-date]
+**📅 Last Updated**: [28-12-2025]
